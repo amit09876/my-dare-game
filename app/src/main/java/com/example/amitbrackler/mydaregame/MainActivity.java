@@ -10,6 +10,30 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    //people
+    private String[] people = {
+            "Bittu",
+            "Abhishek",
+            "Shashi",
+            "Abhishek2",
+            "Mohit",
+            "Abhishek3",
+            "Anisha",
+            "Bhola",
+            "Amit",
+            "Saurav",
+            "Sachin",
+            "Ishika",
+            "Vinit",
+            "Harish",
+            "Mojammil",
+            "Saurav1",
+            "Abhijeet",
+            "Dipesh",
+            "Priya",
+            "Shakshi"
+    };
+
     //#1 Defined a set of dares
     private String[] dares = {
             "Go Outside And Dance Like A Cowboy.",
@@ -39,11 +63,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Random rand = new Random();
-                int i = rand.nextInt(dares.length - 1);
+                int d = rand.nextInt(dares.length - 1);
+                String dare = dares[d];
 
-                String dare = dares[i];
+                int n = rand.nextInt(people.length - 1);
+                String name = people[n];
 
-                textViewDare.setText(dare);
+                textViewDare.setText("Dare for " + name + " is " + dare);
             }
         });
     }
